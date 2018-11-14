@@ -2,19 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="MARTIANS - Multi-users AR Toolbox">
+    <title>MARTIANS</title>
+    <meta name="description" content="MARTIANS">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="mars-obj" src="./mars/13903_Mars_v1_l3.obj"></a-asset-item>
-        <a-asset-item id="mars-mtl" src="./mars/13903_Mars_v1_l3.mtl"></a-asset-item>
+        <a-asset-item id="mars-obj" src="./mars/mars.obj"></a-asset-item>
+        <a-asset-item id="mars-mtl" src="./mars/mars.mtl"></a-asset-item>
       </a-assets>
       <a-entity obj-model="obj: #mars-obj; mtl: #mars-mtl" scale="0.005 0.005 0.005" position="-3 2 -5" rotation="120 0 10"></a-entity>
+      
+      <a-assets>
+        <img id="partners_map" src="./imgs/partners_map.png">
+      </a-assets>
+      <a-image src="#partners_map" position="0 2.5 -2.4" scale="2 2 2"></a-image>
 
-      <a-sky color="#ECECEC"></a-sky>
+      <a-entity id="size" position="6.2 1.2 -2.4"
+                text="color: black; align: left; value: MARTIANS; width: 13">
+      </a-entity>
+      <a-entity id="size" position="3.75 0.8 -2.4"
+                text="color: black; align: left; value: Multi-user AR Toolbox In; width: 8">
+      </a-entity>
+      <a-entity id="size" position="3.75 0.5 -2.4"
+                text="color: black; align: left; value: AdvaNced Scenarios; width: 8">
+      </a-entity>
+      
+
+      <a-sky color="#FFFFFF"></a-sky>
     </a-scene>
   </body>
 </html>
